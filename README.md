@@ -60,6 +60,31 @@ database/pos_system.sql
 
 3. Ensure Apache and MySQL are running in XAMPP.
 
+## Environment Configuration
+
+Rename the provided environment file:
+
+```text
+env -> .env
+```
+
+Configure the database connection:
+
+```ini
+database.default.hostname = localhost
+database.default.database = pos_system
+database.default.username = root
+database.default.password =
+database.default.DBDriver = MySQLi
+database.default.port = 3306
+```
+
+Configure the application URL:
+
+```ini
+app.baseURL = 'http://localhost:8080/'
+```
+
 ## Running the Application
 
 Start the development server:
