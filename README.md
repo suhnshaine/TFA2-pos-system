@@ -1,78 +1,80 @@
-# POS System (Version 1)
+# TFA2 - From Arrays to a Real Database (CodeIgniter POS)
 
 ## Overview
 
-This project is a basic Point-of-Sale (POS) System developed using CodeIgniter 4. It demonstrates the Model-View-Controller (MVC) architecture by implementing multiple pages, routing, controllers, and views.
-
-The application currently uses static PHP arrays as temporary data sources for customer and user account information. No database integration has been implemented yet.
+This project is a continuation of the Point-of-Sale (POS) system developed in TFA1 using CodeIgniter 4. The application follows the Model-View-Controller (MVC) architecture and replaces the static PHP arrays from the previous activity with a MySQL database. Customer and user data are retrieved through CodeIgniter Models using Query Builder methods.
 
 ## Features
 
-- Landing Page (/)
-- About Page (/about)
-- Customer Accounts Page (/customers)
-- User Accounts Page (/users)
-- Navigation between all pages
-- Dynamic data display using PHP foreach loops
-- Built with CodeIgniter 4
+- Landing Page
+- About Page
+- Customer Accounts Page
+- User Accounts Page
+- MySQL Database Integration
+- CodeIgniter Models
+- Query Builder Data Retrieval
+- MVC Architecture
 
 ## Technologies Used
 
-- PHP 8+
+- PHP
 - CodeIgniter 4
-- HTML5
-- CSS3
+- MySQL
+- XAMPP
 - Composer
+- HTML/CSS
 
 ## Installation
 
-### 1. Clone the Repository
+### Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/pos-system.git
+git clone https://github.com/YOUR_USERNAME/IT0049-TFA2-POS-System.git
 ```
 
-### 2. Navigate to the Project Folder
+### Navigate to the Project Folder
 
 ```bash
-cd pos-system
+cd IT0049-TFA2-POS-System
 ```
 
-### 3. Install Dependencies
+### Install Dependencies
 
 ```bash
 composer install
 ```
 
-### 4. Configure Environment
+## Database Setup
 
-Rename the environment file:
+1. Create a database named:
 
 ```text
-env -> .env
+pos_system
 ```
 
-Set the base URL in `.env`:
+2. Import the database export file:
 
-```ini
-app.baseURL = 'http://localhost:8080/'
+```text
+database/pos_system.sql
 ```
 
-### 5. Start the Development Server
+3. Ensure Apache and MySQL are running in XAMPP.
+
+## Running the Application
+
+Start the development server:
 
 ```bash
 php spark serve
 ```
 
-### 6. Open the Application
-
-Visit:
+Open:
 
 ```text
 http://localhost:8080
 ```
 
-## Available Routes
+## Available Pages
 
 | Route | Description |
 |---------|-------------|
@@ -81,53 +83,38 @@ http://localhost:8080
 | /customers | Customer Accounts |
 | /users | User Accounts |
 
-## Project Structure
+## MVC Implementation
 
-```text
-app
-├── Controllers
-│   ├── Pages.php
-│   ├── Customers.php
-│   └── Users.php
-│
-├── Views
-│   ├── home.php
-│   ├── about.php
-│   ├── customers.php
-│   └── users.php
-│
-└── Config
-    └── Routes.php
-```
+The application follows the Model-View-Controller (MVC) architecture.
 
-## Sample Data
+- Routes map incoming URL requests to controller methods.
+- Controllers handle requests and retrieve data through Models.
+- Models communicate with the MySQL database using Query Builder methods such as `findAll()`.
+- Views receive data from controllers and display the results to users.
 
-### Customer Accounts
+## Database Tables
 
-The Customer Accounts page displays customer records containing:
+### Customers
 
-- Full Name
-- Email Address
-- Phone Number
+- id
+- full_name
+- email
+- phone
+- created_at
 
-### User Accounts
+### Users
 
-The User Accounts page displays user records containing:
+- id
+- username
+- full_name
+- created_at
 
-- Username
-- Full Name
-- Role
+## Live Demo
+
+NOT YET HOSTED
 
 ## Author
 
 **SHIREALETH ACORDA**
 
-Student, FEU Institute of Technology
-
-## License
-
-This project was created for academic purposes.
-
-## Live Demo
-
-https://posscacorda.infinityfreeapp.com
+FEU Institute of Technology
