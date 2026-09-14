@@ -23,14 +23,12 @@
     <tr>
         <th>Username</th>
         <th>Full Name</th>
-        <th>Role</th>
     </tr>
 
     <?php foreach ($users as $user): ?>
     <tr>
         <td><?= ($user['username']) ?></td>
-        <td><?= ($user['fullname']) ?></td>
-        <td><?= ($user['role']) ?></td>
+        <td><?= ($user['full_name']) ?></td>
     </tr>
     <?php endforeach; ?>
 

@@ -28,7 +28,7 @@
 
     <?php foreach ($customers as $customer): ?>
     <tr>
-        <td><?= ($customer['fullname']) ?></td>
+        <td><?= ($customer['full_name']) ?></td>
         <td><?= ($customer['email']) ?></td>
         <td><?= ($customer['phone']) ?></td>
     </tr>
