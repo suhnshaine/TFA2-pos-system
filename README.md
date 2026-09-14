@@ -29,13 +29,13 @@ This project is a continuation of the Point-of-Sale (POS) system developed in TF
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/IT0049-TFA2-POS-System.git
+git clone https://github.com/suhnshaine/TFA2-pos-system.git
 ```
 
 ### Navigate to the Project Folder
 
 ```bash
-cd IT0049-TFA2-POS-System
+cd TFA2-POS-System
 ```
 
 ### Install Dependencies
