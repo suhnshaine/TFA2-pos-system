@@ -18,7 +18,7 @@
 </nav>
 
 <h1>Welcome</h1>
-<p>Welcome to the POS System Version 1.</p>
+<p>Welcome to the POS System Version 2.</p>
 
 </div>
 </body>
